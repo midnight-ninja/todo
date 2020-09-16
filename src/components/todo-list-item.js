@@ -6,18 +6,18 @@ const TodoListItem = ({ label, important = false }) => {
   };
 
   return (
-    <div class="mui-row todo-list-item">
-      <div class="mui-col-md-6">
-        <span class="label" style={style}>
+    <div className="mui-row todo-list-item">
+      <div className="mui-col-md-6">
+        <span className="label" style={style}>
           {label}
         </span>
       </div>
-      <div class="mui-col-md-6 mui--text-right">
-        <button class="mui-btn mui-btn--fab mui-btn--small mui-btn--primary">
-          <i class="fas fa-exclamation"></i>
+      <div className="mui-col-md-6 mui--text-right">
+        <button className="mui-btn mui-btn--fab mui-btn--small mui-btn--primary">
+          <i className="fas fa-exclamation"></i>
         </button>
-        <button class="mui-btn mui-btn--fab mui-btn--small mui-btn--danger">
-          <i class="far fa-trash-alt"></i>
+        <button className="mui-btn mui-btn--fab mui-btn--small mui-btn--danger">
+          <i className="far fa-trash-alt"></i>
         </button>
       </div>
     </div>
