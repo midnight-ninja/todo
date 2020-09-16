@@ -1,28 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const el = (
-  <div class="mui-container">
-    {/* app-header */}
-    <div class="app-header mui--appbar-height mui--appbar-line-height">
-      <div class="mui-row">
-        <div class="mui-col-md-7">
-          <h1>ToDo List</h1>
-        </div>
-        <div class="mui-col-md-5 mui--text-right">
-          <span class="mui--text-dark-secondary">2 more to do, 3 done</span>
-        </div>
-      </div>
-    </div>
-    {/* search-panal */}
-    <div class="mui-row">
-      <div class="mui-col-md-12">
-        <div class="mui-textfield">
-          <input type="text" placeholder="Search" />
-        </div>
-      </div>
-    </div>
-    {/* doto-list */}
+const TodoList = () => {
+  return (
     <div class="mui-row">
       <div class="mui-col-md-12">
         <ul class="mui-list--unstyled mui--appbar-height mui--appbar-line-height">
@@ -59,7 +39,47 @@ const el = (
         </ul>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-ReactDOM.render(el, document.getElementById("root"));
+const AppHeader = () => {
+  return (
+    <div class="app-header mui--appbar-height mui--appbar-line-height">
+      <div class="mui-row">
+        <div class="mui-col-md-7">
+          <h1>ToDo List</h1>
+        </div>
+        <div class="mui-col-md-5 mui--text-right">
+          <span class="mui--text-dark-secondary">2 more to do, 3 done</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SearchPanal = () => {
+  return (
+    <div class="mui-row">
+      <div class="mui-col-md-12">
+        <div class="mui-textfield">
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <div class="mui-container">
+      {/* app-header */}
+      <AppHeader />
+      {/* search-panal */}
+      <SearchPanal />
+      {/* doto-list */}
+      <TodoList />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("root"));
