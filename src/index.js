@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const TodoList = () => {
+  const items = ["Drink coffee", "Build Awesome App"];
+
   return (
     <div class="mui-row">
       <div class="mui-col-md-12">
@@ -9,7 +11,7 @@ const TodoList = () => {
           <li class="mui-panel panel">
             <div class="mui-row todo-list-item">
               <div class="mui-col-md-6">
-                <span class="label">Learn React</span>
+                <span class="label">{items[0]}</span>
               </div>
               <div class="mui-col-md-6 mui--text-right">
                 <button class="mui-btn mui-btn--fab mui-btn--small mui-btn--primary">
@@ -24,7 +26,7 @@ const TodoList = () => {
           <li class="mui-panel panel">
             <div class="mui-row todo-list-item">
               <div class="mui-col-md-6">
-                <span class="label">Build Awesome App</span>
+                <span class="label">{items[1]}</span>
               </div>
               <div class="mui-col-md-6 mui--text-right">
                 <button class="mui-btn mui-btn--fab mui-btn--small mui-btn--primary">
