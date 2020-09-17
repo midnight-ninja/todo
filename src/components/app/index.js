@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div className="mui-container">
-      <AppHeader />
+      <AppHeader toDo={todoData.length} done={3} />
       <SearchPanel />
       <ItemStatusFilter />
       <TodoList todos={todoData} />
