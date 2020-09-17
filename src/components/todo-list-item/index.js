@@ -8,12 +8,12 @@ const TodoListItem = ({ label, important = false }) => {
 
   return (
     <div className="mui-row todo-list-item">
-      <div className="mui-col-md-6">
+      <div className="mui-col-md-10">
         <span className="label" style={style}>
           {label}
         </span>
       </div>
-      <div className="mui-col-md-6 mui--text-right">
+      <div className="mui-col-md-2 mui--text-center">
         <button className="mui-btn mui-btn--fab mui-btn--small mui-btn--primary">
           <i className="fas fa-exclamation"></i>
         </button>
