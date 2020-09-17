@@ -2,6 +2,10 @@ import React from "react";
 import "./todo-list-item.css";
 
 export default class TodoListItem extends React.Component {
+  onLabelClick = () => {
+    console.log(`Done: ${this.props.label}`);
+  };
+
   render() {
     const { label, important = false } = this.props;
     const style = {
@@ -11,7 +15,7 @@ export default class TodoListItem extends React.Component {
     return (
       <div className="mui-row todo-list-item">
         <div className="mui-col-md-10 mui-col-xs-6">
-          <span className="label" style={style}>
+          <span className="label" style={style} onClick={this.onLabelClick}>
             {label}
           </span>
         </div>
