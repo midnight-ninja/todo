@@ -1,6 +1,5 @@
 .todo-list-item {
   margin-left: 1.25rem;
-  font-weight: bold;
   cursor: pointer;
   font-size: 1.25rem;
 }
@@ -11,4 +10,9 @@
 
 .done {
   text-decoration: line-through;
+}
+
+.important {
+  font-weight: bold;
+  color: tomato;
 }

@@ -8,22 +8,24 @@ export default class TodoListItem extends React.Component {
   };
 
   onLabelClick = () => {
-    this.setState({
-      done: true,
+    this.setState(({ done }) => {
+      return {
+        done: !done,
+      };
     });
   };
   onExclamationClick = () => {
-    this.setState({
-      important: true,
+    this.setState(({ important }) => {
+      return {
+        important: !important,
+      };
     });
   };
 
   render() {
     const { label } = this.props;
     const { done, important } = this.state;
-    const style = {
-      color: important ? "tomato" : "black",
-    };
+
     let className = "todo-list-item";
     if (done) {
       className += " done";
@@ -35,7 +37,7 @@ export default class TodoListItem extends React.Component {
     return (
       <div className="mui-row">
         <div className="mui-col-md-10 mui-col-xs-6">
-          <span className={className} style={style} onClick={this.onLabelClick}>
+          <span className={className} onClick={this.onLabelClick}>
             {label}
           </span>
         </div>
