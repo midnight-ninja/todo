@@ -8,3 +8,7 @@
 .todo-list-item button {
   margin-right: 10px;
 }
+
+.done {
+  text-decoration: line-through;
+}

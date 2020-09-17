@@ -2,8 +2,14 @@ import React from "react";
 import "./todo-list-item.css";
 
 export default class TodoListItem extends React.Component {
+  state = {
+    done: false,
+  };
+
   onLabelClick = () => {
-    console.log(`Done: ${this.props.label}`);
+    this.setState({
+      done: true,
+    });
   };
 
   render() {
@@ -11,11 +17,13 @@ export default class TodoListItem extends React.Component {
     const style = {
       color: important ? "tomato" : "black",
     };
+    const { done } = this.state;
+    let className = done ? "label" + " done" : "label";
 
     return (
       <div className="mui-row todo-list-item">
         <div className="mui-col-md-10 mui-col-xs-6">
-          <span className="label" style={style} onClick={this.onLabelClick}>
+          <span className={className} style={style} onClick={this.onLabelClick}>
             {label}
           </span>
         </div>
